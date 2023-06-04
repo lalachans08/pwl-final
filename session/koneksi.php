@@ -1,10 +1,14 @@
 <?php
-//variabel koneksi
-// $koneksi = mysqli_connect("localhost","id14847421_gunawan02","p3rpus*gunawanP","id14847421_perpustakaan");
 
-$koneksi = mysqli_connect("127.0.0.1", "root", "","","")
+$servername = "localhost";
+$username = "root";
+$password = "1234";
+$dbname = "rna";
 
-if(!$koneksi){
-	echo "Koneksi Database Gagal...!!!";
+// Create connection
+$koneksi = mysqli_connect($servername, $username, $password, $dbname);
+
+// Check connection
+if (!$koneksi) {
+	die("Connection failed: " . mysqli_connect_error());
 }
-?>
